@@ -12,11 +12,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let circle = CircleView(frame: CGRect(x: self.view.bounds.width/2, y: self.view.bounds.height/2, width: 50, height: 50))
-        circle.setColor(color: UIColor.green)
-        circle.backgroundColor = UIColor.white
-        self.view.addSubview(circle)
-        
+        circleViewFactory(number: 35)
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,6 +20,17 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    func circleViewFactory(number: Int) {
+        var curr = 0
+        while curr < number {
+            let randomDimension = arc4random_uniform(100)
+            let circle = CircleView(frame: CGRect(x: CGFloat(arc4random_uniform(UInt32(self.view.bounds.width))), y: CGFloat(arc4random_uniform(UInt32(self.view.bounds.height))), width: CGFloat(randomDimension), height: CGFloat(randomDimension)))
+            circle.setColor(color: circle.getRandomColor())
+            circle.backgroundColor = UIColor.clear
+            self.view.addSubview(circle)
+            curr += 1
+        }
+    }
 
 }
 
