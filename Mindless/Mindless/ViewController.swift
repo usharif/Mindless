@@ -9,10 +9,14 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        let circle = CircleView(frame: CGRect(x: self.view.bounds.width/2, y: self.view.bounds.height/2, width: 50, height: 50))
+        circle.setColor(color: UIColor.green)
+        circle.backgroundColor = UIColor.white
+        self.view.addSubview(circle)
+        
     }
 
     override func didReceiveMemoryWarning() {
