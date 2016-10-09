@@ -12,18 +12,35 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let circle = CircleView(frame: CGRect(x: self.view.bounds.width/2, y: self.view.bounds.height/2, width: 50, height: 50))
-        circle.setColor(color: UIColor.green)
-        circle.backgroundColor = UIColor.white
-        self.view.addSubview(circle)
         
+        addCircleView(s: "Work")
+        addCircleView(s: "project")
+        addCircleView(s: "relationship")
+        addCircleView(s: "car replacement issue")
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    func addCircleView(s: String) {
+        let randomDimension = arc4random_uniform(100)
+        let circle = CircleView(frame: CGRect(x: CGFloat(arc4random_uniform(UInt32(self.view.bounds.width/1.5))), y: CGFloat(arc4random_uniform(UInt32(self.view.bounds.height/1.5))), width: CGFloat(randomDimension), height: CGFloat(randomDimension)))
+        circle.setColor(color: circle.getRandomColor())
+        circle.backgroundColor = UIColor.clear
+        self.view.addSubview(circle)
+        
+        let text = UILabel(frame: circle.frame)
+        text.text = s
+        text.adjustsFontSizeToFitWidth = true
+        text.minimumScaleFactor = 0.05
+        text.numberOfLines = 1
+        text.textAlignment = .center
+        text.center = circle.center
+        text.backgroundColor = UIColor.clear
+        self.view.addSubview(text)
+    }
 
 }
 

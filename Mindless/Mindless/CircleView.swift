@@ -16,19 +16,17 @@ class CircleView: UIView {
         let path = UIBezierPath(ovalIn: rect)
         color.setFill()
         path.fill()
-        
-//        let path = UIBezierPath(ovalIn: CGRect(x: bounds.width/2, y: bounds.height/2, width: 66, height: 66))
-//        UIColor.blue.setFill()
-//        path.fill()
-//        
-//        let path2 = UIBezierPath(rect: CGRect(x: bounds.width/2, y: bounds.height/2, width: 40, height: -70))
-//        UIColor.green.setFill()
-//        path2.fill()
-
     }
     
     func setColor(color: UIColor) -> Void {
         self.color = color
     }
     
+    func getRandomColor() -> UIColor{
+        let randomRed:CGFloat = CGFloat(arc4random()) / CGFloat(UInt32.max)
+        let randomGreen:CGFloat = CGFloat(arc4random()) / CGFloat(UInt32.max)
+        let randomBlue:CGFloat = CGFloat(arc4random()) / CGFloat(UInt32.max)
+        return UIColor(red: randomRed, green: randomGreen, blue: randomBlue, alpha: 1.0)
+    }
+
 }
