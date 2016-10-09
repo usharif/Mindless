@@ -13,6 +13,8 @@
 		610D114E1DA5F807007B1F77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 610D114D1DA5F807007B1F77 /* Assets.xcassets */; };
 		610D11511DA5F807007B1F77 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 610D114F1DA5F807007B1F77 /* LaunchScreen.storyboard */; };
 		6126CA371DA88297003B3F1C /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6126CA361DA88297003B3F1C /* CircleView.swift */; };
+		6126CA391DA9D7BF003B3F1C /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6126CA381DA9D7BF003B3F1C /* Model.swift */; };
+		6126CA3F1DA9E19E003B3F1C /* WordsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6126CA3E1DA9E19E003B3F1C /* WordsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		610D11501DA5F807007B1F77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		610D11521DA5F807007B1F77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6126CA361DA88297003B3F1C /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		6126CA381DA9D7BF003B3F1C /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		6126CA3E1DA9E19E003B3F1C /* WordsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				610D114F1DA5F807007B1F77 /* LaunchScreen.storyboard */,
 				610D11521DA5F807007B1F77 /* Info.plist */,
 				6126CA361DA88297003B3F1C /* CircleView.swift */,
+				6126CA381DA9D7BF003B3F1C /* Model.swift */,
+				6126CA3E1DA9E19E003B3F1C /* WordsTableViewController.swift */,
 			);
 			path = Mindless;
 			sourceTree = "<group>";
@@ -143,6 +149,8 @@
 				610D11491DA5F807007B1F77 /* ViewController.swift in Sources */,
 				6126CA371DA88297003B3F1C /* CircleView.swift in Sources */,
 				610D11471DA5F807007B1F77 /* AppDelegate.swift in Sources */,
+				6126CA3F1DA9E19E003B3F1C /* WordsTableViewController.swift in Sources */,
+				6126CA391DA9D7BF003B3F1C /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
